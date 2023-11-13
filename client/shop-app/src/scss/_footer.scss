@@ -1,0 +1,54 @@
+.footer-section{
+    width: 100%;
+  position: absolute;
+  bottom: 0;
+    margin-top: 2rem;
+    background-color: $blueSiteColor;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   gap: 12px;
+    .help-and-support{
+        .support-text{
+            color: $goldColor;
+            font-weight: 500;
+            .support-contact-number{
+                color: wheat;
+                &:hover{
+                    color: $goldColor;
+                }
+            }
+        }
+        
+        
+    }
+    .copyright-details{
+        .copyright-text{
+            font-weight: bolder;
+            color:$goldColor;
+        }
+    }
+    .web-links{
+       margin:auto;
+        .follow-on-text{
+            font-weight: bold;
+        }
+        .web-icon{
+            color: wheat;
+            &:hover{
+                color: $goldColor;
+            }
+        }
+        display: flex;
+        color: $goldColor;
+        gap:16px;
+    }
+}
+@media screen and (max-width:768px){
+   .help-and-support,
+   .copyright-details,
+   .follow-on-text{
+    font-size: 14px;
+   } 
+}

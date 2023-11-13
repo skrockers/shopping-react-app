@@ -1,17 +1,33 @@
 import Button from "./Button";
 import { FaCartShopping } from "react-icons/fa6";
-const Header = () => {
+import { FaBars } from "react-icons/fa6";
+import NavigationBar from "./NavigationBar";
+
+const Header = ({displayNavHandler ,displayNav}) => {
+
   return (
-    <section className="header-section">
+    <>
+        <section className="header-section">
       <div className="header-brand">
+        <div className="mobile-hamburger-icon">
+            <FaBars onClick={()=> displayNavHandler(!displayNav) } />
+        </div>
         <h1>SKMart</h1>
+        <div className="mobile-cart-icon">
+        <FaCartShopping/>
+        </div>
       </div>
+
+
       <div className="header-search">
         <form className="search-box-form">
           <input className="search-box" name="search-box" type="text" />
           <Button buttonName='Search'   buttonType='search'/>
         </form>
       </div>
+
+
+
       <div className="header-user-links">
         <div className="header-user-greetings">
             <p className="welcome-greeting">Welcome,
@@ -28,6 +44,9 @@ const Header = () => {
         </div>
       </div>
     </section>
+    <NavigationBar />
+    </>
+
   );
 };
 

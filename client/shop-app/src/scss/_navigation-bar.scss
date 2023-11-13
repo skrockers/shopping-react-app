@@ -1,0 +1,23 @@
+.web-navigation-bar{
+    .nav-categories{
+        border-top: 1px solid $navySiteColor;
+        display: flex;
+        justify-content: space-around;
+        background-color: $blueSiteColor;
+        .nav-cat-item{
+            list-style: none;
+            padding: 12px;
+            color: white;
+            font-weight: 500;
+            &:hover{
+                background-color: $goldColor;
+                color:$blueSiteColor;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .web-navigation-bar{
+        display: none;
+    }
+}

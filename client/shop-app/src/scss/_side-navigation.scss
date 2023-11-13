@@ -1,0 +1,74 @@
+.side-navigation {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .side-navigation {
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 65%;
+    height: 100vh;
+    @include box-shadow-effect;
+    left: -100%;
+    transition: 600ms;
+
+    .nav-close {
+      position: absolute;
+      right: 12px;
+      top: 16px;
+      font-weight: bold;
+    }
+    .nav-header {
+      background-color: $blueSiteColor;
+      padding: 16px;
+      text-align: center;
+      color: $goldColor;
+    }
+
+    .user-section {
+      position: relative;
+      padding: 16px;
+      .user-greeting {
+        text-align: center;
+      }
+      .login-signup-links {
+        margin-top: 12px;
+        //   display: flex;
+        //   justify-content: space-evenly;
+        .btn-logout-mobile,
+        .btn-login-mobile,
+        .btn-signup-mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    .category-navigation-mobile {
+      padding: 16px;
+      .nav-category-heading {
+        text-align: center;
+      }
+      .nav-categories {
+        margin-top: 16px;
+        .nav-category-item {
+          list-style-type: none;
+          padding: 12px;
+          text-align: center;
+        }
+      }
+    }
+    .social-media-links {
+      padding: 16px;
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      color: $navySiteColor;
+      margin-top: 3rem;
+    }
+  }
+  .side-navigation.active {
+    left: 0;
+    transition: 600ms;
+  }
+}
