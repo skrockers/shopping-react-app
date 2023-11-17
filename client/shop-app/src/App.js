@@ -5,6 +5,10 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PageNotFound from './pages/PageNotFound';
+import { Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Cart from './pages/Cart';
 function App() {
   const [displayNav, setDisplayNav] = useState(false)
   const displayNavHandler = (value) =>{
@@ -15,15 +19,20 @@ function App() {
     setDisplayNav(value)
   }
   return (
-    <div className="main-shop-app" >
+    <div className="main-shop-app">
       <Header  
       displayNav={displayNav}
       displayNavHandler ={displayNavHandler}/>
       <SideNavigation 
       displayNav={displayNav} 
       closeNavHandler={closeNavHandler}/>
-      <PageNotFound />
-      <Home />
+    <Routes>
+      <Route path='/' element={ <Home />}/>
+      <Route path='/login' element={ <Login />}/>
+      <Route path='/signup' element={ <Signup />}/>
+      <Route path='/cart' element={ <Cart />}/>
+      <Route path='*' element={ <PageNotFound />}/>
+    </Routes>
       <Footer/>
     </div>
   );

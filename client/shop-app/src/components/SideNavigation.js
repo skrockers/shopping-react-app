@@ -5,10 +5,13 @@ import {
   FaSquareInstagram,
   FaLinkedin,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const SideNavigation = ({ displayNav , closeNavHandler }) => {
   return (
+    // <div className={displayNav ? "grey-out":''} onClick={closeNavHandler(!displayNav)}>
     <section
+    onClick={()=> closeNavHandler(false)}
       className={displayNav ? "side-navigation active" : "side-navigation"}
     >
       <div className="nav-header">
@@ -22,11 +25,19 @@ const SideNavigation = ({ displayNav , closeNavHandler }) => {
           <h2>Saikumar</h2>
         </div>
         <div className="login-signup-links">
-          <Button buttonName="Login" buttonType="login btn-login-mobile" />
+          <Link to="/login">
+            <Button buttonName="Login" buttonType="login btn-login-mobile" />
+          </Link>
+          
+          <Link to="/signup">
           <Button buttonName="Signup" buttonType="signup btn-signup-mobile" />
           <br />
-
+          
+          </Link>
+          
+          <Link to="/logout">
           <Button buttonName="Logout" buttonType="logout btn-logout-mobile" />
+          </Link>
         </div>
       </div>
       <div className="category-navigation-mobile">
@@ -43,19 +54,24 @@ const SideNavigation = ({ displayNav , closeNavHandler }) => {
 
       <div className="social-media-links">
         <div className="social-facebook-link">
-          <FaSquareFacebook />
+          <Link className="social-icon" to="https://www.facebook.com"><FaSquareFacebook /></Link>
+          
         </div>
         <div className="social-twitter-link">
-          <FaSquareTwitter />
+          <Link className="social-icon" to="https://www.twitter.com"><FaSquareTwitter /></Link>
+          
         </div>
         <div className="social-instagram-link">
-          <FaSquareInstagram />
+          <Link className="social-icon" to="https://www.instagram.com"><FaSquareInstagram /></Link>
+          
         </div>
         <div className="social-linkedin-link">
-          <FaLinkedin />
+          <Link  className="social-icon" to="https://www.linkedin.com"><FaLinkedin /></Link>
+          
         </div>
       </div>
     </section>
+    // </div>
   );
 };
 

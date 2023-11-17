@@ -2,6 +2,7 @@ import Button from "./Button";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa6";
 import NavigationBar from "./NavigationBar";
+import { Link } from "react-router-dom";
 
 const Header = ({displayNavHandler ,displayNav}) => {
 
@@ -12,9 +13,10 @@ const Header = ({displayNavHandler ,displayNav}) => {
         <div className="mobile-hamburger-icon">
             <FaBars onClick={()=> displayNavHandler(!displayNav) } />
         </div>
-        <h1>SKMart</h1>
+        <Link to="/">  <h1>SKMart</h1></Link>
+      
         <div className="mobile-cart-icon">
-        <FaCartShopping/>
+        <Link  className="react-link" to="/cart"><FaCartShopping className="cart-icon"/></Link>
         </div>
       </div>
 
@@ -31,14 +33,15 @@ const Header = ({displayNavHandler ,displayNav}) => {
       <div className="header-user-links">
         <div className="header-user-greetings">
             <p className="welcome-greeting">Welcome,
-            <span className="greeting-user-name">Saikumarsss Murugesan</span>
+            <span className="greeting-user-name">Saikumar Murugesan</span>
             </p>
         </div>
         <div className="btn-links">
-            <Button buttonName='Login' buttonType='login'/>
-            <Button buttonName='Sign up' buttonType='signup'/>
+            <Link to="/login"><Button buttonName='Login' buttonType='login'/></Link>
+            <Link to="/signup"><Button buttonName='Sign up' buttonType='signup'/></Link>
             <div className="header-cart">
-            <FaCartShopping className="cart-icon"/>
+              <Link to="/cart"><FaCartShopping className="cart-icon"/></Link>
+            
             </div>
 
         </div>
