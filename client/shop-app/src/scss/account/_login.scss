@@ -1,0 +1,117 @@
+.login-section{
+    z-index: 0;
+    display: flex;
+    .login-box{
+        background-color: $blueSiteColor;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 1rem;
+        min-width: 30%;
+        align-self: self-start;
+        @include box-shadow-effect;
+        .login-heading{
+            text-align: center;
+            color: white;
+            
+            font-size: 32px;
+        }
+        .login-form{
+            .login-input{
+                z-index: 0;
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                label{
+                    color: white;
+                    // color:$goldColor;
+                    font-weight: 600;
+                    padding: 6px 0;
+
+                }
+                input[type="email"],
+                input[type="password"],
+                input[type="text"]{
+                    width: 100%;
+                    padding: 8px;
+                    border: none;
+                    outline: none;
+                    
+                }
+                .pwd-input,.email-input{
+                    width: 100%;
+                    border-radius: 12px;
+                    position: relative;
+                    background-color: white;
+                    padding: 4px;
+                    .btn-show{
+                        position: absolute;
+                        top:4px;
+                        right: 4px;
+                        padding: 8px;
+                    }
+                }
+            }
+            .login-forgot-password{
+                margin-top: 12px;
+                text-align: end;
+                font-size: 14px;
+                color: white;
+                .login-reset-link{
+                    color: $goldColor;
+                    font-weight: 500;
+                    text-decoration: none;
+                    
+                }
+
+            }
+            .form-submit{
+                text-align: end;
+                .btn-login-form-submit{
+                    margin-top: 1rem;
+                    width: 20%;
+                  
+                   
+                }
+               
+            }
+        }
+    }
+    .site-login-ads-slots{
+       
+        margin: 1rem;
+        // background-color: $goldColor;
+        padding: 1rem;
+        border-radius: 1rem;
+        // width: 70%;
+    }
+}
+
+@media screen and (max-width:409px){
+    .login-section{
+        flex-direction: column;
+        .login-box{
+          min-width: 90%;
+          align-self: center;
+        }
+      }
+}
+@media screen and (min-width:410px) and (max-width:768px){
+    .login-section{
+      flex-direction: column;
+      .login-box{
+        min-width: 70%;
+        align-self: center;
+      }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:990px) {
+    .login-section{
+        flex-direction: column;
+        .login-box{
+            align-self: center;
+            min-width: 40%;
+        }
+    }
+    
+}

@@ -1,6 +1,8 @@
-const Button =({buttonName,buttonType}) =>{
+const Button =({buttonName,buttonType,buttonSubmit,buttonForm,buttonClickHandler}) =>{
     return(
-        <button className={`btn btn-${buttonType}`}> {buttonName}</button>
+        <button className={`btn btn-${buttonType}`} type={buttonSubmit ? buttonSubmit: ''} form={buttonForm}
+        onClick={(e) => buttonClickHandler ? buttonClickHandler(e):""}
+        > {buttonName}</button>
     )
 }
 

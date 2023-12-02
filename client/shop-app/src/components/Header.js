@@ -13,10 +13,10 @@ const Header = ({displayNavHandler ,displayNav}) => {
         <div className="mobile-hamburger-icon">
             <FaBars onClick={()=> displayNavHandler(!displayNav) } />
         </div>
-        <Link to="/">  <h1>SKMart</h1></Link>
+        <Link className="brand-link" to="/">  <h1>SKMart</h1></Link>
       
         <div className="mobile-cart-icon">
-        <Link  className="react-link" to="/cart"><FaCartShopping className="cart-icon"/></Link>
+        <Link  className="cart-link" to="/cart"><FaCartShopping className="cart-icon"/></Link>
         </div>
       </div>
 

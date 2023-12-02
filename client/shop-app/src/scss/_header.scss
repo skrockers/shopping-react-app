@@ -1,5 +1,6 @@
 @import "./variables";
 .header-section {
+  z-index: 990;
   position: sticky;
   top:0;
   width: 100%;
@@ -12,7 +13,11 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   .header-brand {
-    color: $goldColor;
+    .brand-link{
+      color: $goldColor;
+      text-decoration: none;
+    }
+   
     .mobile-cart-icon{
       display: none;
     }
@@ -24,7 +29,7 @@
   .header-search {
     .search-box-form {
       padding: 4px;
-      border: 1px solid black;
+      // border: 1px solid black;
       background-color: white;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -77,6 +82,7 @@
         align-items: flex-start;
         padding-top:12px;
         .mobile-hamburger-icon{
+          color: $goldColor;
             display: block;
             padding-left: 12px;
             font-size:30px;
@@ -85,8 +91,9 @@
             display: block;
             padding-right:12px;
             font-size:30px;
-           .cart-icon{
-            color: white;
+          
+           .cart-link{
+            color: $goldColor;
            }
         }
     }

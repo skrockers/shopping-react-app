@@ -1,4 +1,6 @@
 .web-navigation-bar{
+    position: fixed;
+    width: 100%;
     .nav-categories{
         border-top: 1px solid $navySiteColor;
         display: flex;

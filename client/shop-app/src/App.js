@@ -1,14 +1,15 @@
 import './App.scss';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 import SideNavigation from './components/SideNavigation';
 import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import PageNotFound from './pages/PageNotFound';
-import { Route, Routes } from 'react-router-dom';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Cart from './pages/Cart';
+// import PageNotFound from './pages/PageNotFound';
+// import { Route, Routes } from 'react-router-dom';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import Cart from './pages/Cart';
+import MainContent from './components/MainContent';
 function App() {
   const [displayNav, setDisplayNav] = useState(false)
   const displayNavHandler = (value) =>{
@@ -25,14 +26,8 @@ function App() {
       displayNavHandler ={displayNavHandler}/>
       <SideNavigation 
       displayNav={displayNav} 
-      closeNavHandler={closeNavHandler}/>
-    <Routes>
-      <Route path='/' element={ <Home />}/>
-      <Route path='/login' element={ <Login />}/>
-      <Route path='/signup' element={ <Signup />}/>
-      <Route path='/cart' element={ <Cart />}/>
-      <Route path='*' element={ <PageNotFound />}/>
-    </Routes>
+      closeNavHandler={closeNavHandler}/> 
+    <MainContent />
       <Footer/>
     </div>
   );
