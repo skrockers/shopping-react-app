@@ -1,0 +1,69 @@
+.signup-section {
+  width: 40%;
+  margin: auto;
+  background-color: $blueSiteColor;
+  border-radius: 12px;
+
+  .signup-heading {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  .signup-form {
+    width: 60%;
+    margin: auto;
+
+    padding: 48px 0;
+    .signup-flex {
+      display: flex;
+      flex-direction: column;
+
+      .signup-input-error {
+        color: $dangerColor;
+        font-weight: bold;
+      }
+      .error-active {
+        border: 2px solid $dangerColor;
+      }
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 12px;
+      outline: none;
+      border: none;
+    }
+    label {
+      color: #fff;
+      font-weight: 600;
+      padding: 6px 0;
+    }
+  }
+  .redirect-to-login {
+    margin-top: 12px;
+    .login-link {
+      text-decoration: none;
+      color: $goldColor;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  .signup-user-submit {
+    text-align: end;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-signup-submit {
+      min-width: 20%;
+      max-width: 35%;
+      display: flex;
+      font-weight: bold;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.main-spinner-circle{
+    width: 80px;
+    height: 80px;
+    border: 10px solid red;
+    border-top: 10px solid $blueSiteColor;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    animation: spin 1s linear infinite;
+   
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+ 
+}
+.main-mini-spinner-circle{
+    width: 30px;
+    height: 30px;
+    border: 5px solid $blueSiteColor;
+    border-top: 5px solid $goldColor;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    animation: spin 1s linear infinite;
+   
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+ 
+}

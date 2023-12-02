@@ -1,8 +1,13 @@
 import React from 'react'
+import Spinner from '../components/Spinner'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>
+
+  <Spinner spinnerType={"main-spinners"}/>
+
+    </div>
   )
 }
 

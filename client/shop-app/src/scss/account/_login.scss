@@ -65,10 +65,15 @@
 
             }
             .form-submit{
-                text-align: end;
+                display: flex;
+                justify-content: end;
                 .btn-login-form-submit{
                     margin-top: 1rem;
-                    width: 20%;
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    font-weight: bold;
+                    text-align: center;
                   
                    
                 }

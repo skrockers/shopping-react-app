@@ -9,6 +9,7 @@ const Login = () => {
     email:"",password:""
   })
   const [viewPassword,setViewPassword] = useState(false);
+  const [spinner, setSpinner] = useState(false);
 
   const showPasswordHandler = (e) =>{
     e.preventDefault();
@@ -17,9 +18,12 @@ const Login = () => {
 
   const loginSubmitHandler = (e) =>{
     e.preventDefault();
+    setSpinner(true)
     const loginEmail = loginInput && loginInput.email ? loginInput.email : null;
     const loginPassword = loginInput && loginInput.password ?
     loginInput.password : null;
+
+    alert(loginEmail + loginPassword)
 
  
   }
@@ -61,6 +65,7 @@ const Login = () => {
             <Button buttonType='login-form-submit' buttonName="Login" buttonSubmit={'submit'}
             buttonform="login-form" 
             buttonClickHandler={loginSubmitHandler}
+            buttonSpinner={spinner ?  "mini": null}
             />
           </div>
         </form>
