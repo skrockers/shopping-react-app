@@ -22,7 +22,7 @@ const Signup = () => {
 
   const [spinner, setSpinner] = useState(false);
 
-  const signupSubmitHandler = (e) => {
+  const signupSubmitHandler = async (e) => {
     setSpinner(true)
     e.preventDefault();
     const signUpName =
@@ -55,6 +55,29 @@ const Signup = () => {
         confirmPassword: "Confirm Password Field is blank",
         contact: "Contact Field is blank",
       });
+    }
+
+    const serverResponse = await fetch('http://localhost:5000/account/signup',{
+      method:'POST',
+      headers:{
+        "Content-type":"application/json"
+      },
+      body: JSON.stringify({
+        name: signUpName,
+        email: signUpEmail,
+        password: signUpPassword,
+        confirmPassword: signUpConfirmPassword,
+        contactNo: signUpContact
+      })
+    }) 
+
+    const result = serverResponse.json();
+    setSpinner(false);
+    if(serverResponse.status === 200 && result.isOk) {
+      window.alert("Signup Success")
+    }
+    else {
+      window.alert('Something went wrong')
     }
 
     

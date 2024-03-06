@@ -16,14 +16,33 @@ const Login = () => {
     setViewPassword(!viewPassword)
   }
 
-  const loginSubmitHandler = (e) =>{
+  const loginSubmitHandler = async(e) =>{
     e.preventDefault();
     setSpinner(true)
     const loginEmail = loginInput && loginInput.email ? loginInput.email : null;
     const loginPassword = loginInput && loginInput.password ?
     loginInput.password : null;
 
-    alert(loginEmail + loginPassword)
+    const serverResponse = await fetch('http://localhost:5000/account/login',{
+      method: 'POST',
+      headers:{
+        'Content-type':'application/json'
+      },
+      body: JSON.stringify({
+        email: loginEmail,
+        password: loginPassword
+      })
+    })
+
+    const result = await serverResponse.json();
+    if(serverResponse.status === 200 && result.isOk){
+      setSpinner(false);
+      window.alert(result.message);
+    }
+    else{
+      setSpinner(false);
+      window.alert('User not found');
+    }
 
  
   }
