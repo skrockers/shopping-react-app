@@ -38,6 +38,8 @@ const Login = () => {
     if(serverResponse.status === 200 && result.isOk){
       setSpinner(false);
       window.alert(result.message);
+      // Redirect to account dashboard
+      
     }
     else{
       setSpinner(false);

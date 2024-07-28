@@ -11,8 +11,11 @@
 @import './scss/account/signup';
 @import './scss/banner-ads/login-banner';
 @import './scss/spinner';
+@import './scss/account/dashboard';
+
 
 .main-shop-app{
     width: 100%;
+    @include site_font_fira_regular;
     
 }

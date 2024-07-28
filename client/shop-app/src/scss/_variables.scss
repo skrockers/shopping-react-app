@@ -11,6 +11,17 @@ $lightYellow: #FFF0CE;
 $dangerColor: #FC6748;
 
 
+// Font Family
+.fira-sans-regular {
+    
+  }
+
+  @mixin site_font_fira_regular() {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 // html,body, #root{
 //     width: 100vw;
 //     height: 100vh;

@@ -37,8 +37,8 @@ const Header = ({displayNavHandler ,displayNav}) => {
             </p>
         </div>
         <div className="btn-links">
-            <Link to="/login"><Button buttonName='Login' buttonType='login'/></Link>
-            <Link to="/signup"><Button buttonName='Sign up' buttonType='signup'/></Link>
+            <Link to="/account/login"><Button buttonName='Login' buttonType='login'/></Link>
+            <Link to="/account/signup"><Button buttonName='Sign up' buttonType='signup'/></Link>
             <div className="header-cart">
               <Link to="/cart"><FaCartShopping className="cart-icon"/></Link>
             
